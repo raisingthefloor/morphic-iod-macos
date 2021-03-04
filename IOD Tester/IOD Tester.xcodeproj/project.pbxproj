@@ -25,6 +25,7 @@
 /* Begin PBXFileReference section */
 		DF1D4C6325EFD07C00B8E8CA /* IOD Tester */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "IOD Tester"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF1D4C6625EFD07C00B8E8CA /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		DF1D4C6E25F11B4D00B8E8CA /* IOD Tester.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "IOD Tester.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +58,7 @@
 		DF1D4C6525EFD07C00B8E8CA /* IOD Tester */ = {
 			isa = PBXGroup;
 			children = (
+				DF1D4C6E25F11B4D00B8E8CA /* IOD Tester.entitlements */,
 				DF1D4C6625EFD07C00B8E8CA /* main.swift */,
 			);
 			path = "IOD Tester";
@@ -244,6 +246,7 @@
 		DF1D4C6B25EFD07C00B8E8CA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "IOD Tester/IOD Tester.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5AAXYGZ428;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -255,6 +258,7 @@
 		DF1D4C6C25EFD07C00B8E8CA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "IOD Tester/IOD Tester.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5AAXYGZ428;
 				ENABLE_HARDENED_RUNTIME = YES;
