@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		DF1D4C6725EFD07C00B8E8CA /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1D4C6625EFD07C00B8E8CA /* main.swift */; };
+		DF1D4CA225F6572800B8E8CA /* MorphicIoD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF1D4CA125F6572800B8E8CA /* MorphicIoD.framework */; };
+		DF1D4CA325F6572800B8E8CA /* MorphicIoD.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DF1D4CA125F6572800B8E8CA /* MorphicIoD.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -20,12 +22,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
+		DF1D4CA425F6572800B8E8CA /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				DF1D4CA325F6572800B8E8CA /* MorphicIoD.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		DF1D4C6325EFD07C00B8E8CA /* IOD Tester */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "IOD Tester"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF1D4C6625EFD07C00B8E8CA /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		DF1D4C6E25F11B4D00B8E8CA /* IOD Tester.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "IOD Tester.entitlements"; sourceTree = "<group>"; };
+		DF1D4CA125F6572800B8E8CA /* MorphicIoD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MorphicIoD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF1D4CA225F6572800B8E8CA /* MorphicIoD.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +59,7 @@
 			children = (
 				DF1D4C6525EFD07C00B8E8CA /* IOD Tester */,
 				DF1D4C6425EFD07C00B8E8CA /* Products */,
+				DF1D4CA025F6572800B8E8CA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +80,14 @@
 			path = "IOD Tester";
 			sourceTree = "<group>";
 		};
+		DF1D4CA025F6572800B8E8CA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DF1D4CA125F6572800B8E8CA /* MorphicIoD.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,6 +98,7 @@
 				DF1D4C5F25EFD07C00B8E8CA /* Sources */,
 				DF1D4C6025EFD07C00B8E8CA /* Frameworks */,
 				DF1D4C6125EFD07C00B8E8CA /* CopyFiles */,
+				DF1D4CA425F6572800B8E8CA /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

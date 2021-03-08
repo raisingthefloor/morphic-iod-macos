@@ -4,4 +4,7 @@
    <FileRef
       location = "group:IOD Tester/IOD Tester.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:MorphicIoD/MorphicIoD.xcodeproj">
+   </FileRef>
 </Workspace>
