@@ -11,6 +11,12 @@
 		DF1D4C8D25F2464100B8E8CA /* MorphicIoDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1D4C8C25F2464100B8E8CA /* MorphicIoDTests.swift */; };
 		DF1D4C8F25F2464100B8E8CA /* MorphicIoD.h in Headers */ = {isa = PBXBuildFile; fileRef = DF1D4C8125F2464000B8E8CA /* MorphicIoD.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DF1D4C9B25F276BC00B8E8CA /* IoDDMGInstaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1D4C9A25F276BC00B8E8CA /* IoDDMGInstaller.swift */; };
+		DFFA056B260B424B0084BB5D /* ApplicationServices.h in Headers */ = {isa = PBXBuildFile; fileRef = DFFA0569260B424B0084BB5D /* ApplicationServices.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		DFFA056C260B424B0084BB5D /* DiskImages.h in Headers */ = {isa = PBXBuildFile; fileRef = DFFA056A260B424B0084BB5D /* DiskImages.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		DFFA0572260B426A0084BB5D /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFFA0571260B426A0084BB5D /* ApplicationServices.framework */; };
+		DFFA0583260B43130084BB5D /* CBBlueLightClient.h in Headers */ = {isa = PBXBuildFile; fileRef = DFFA0582260B43130084BB5D /* CBBlueLightClient.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		DFFA058B260B44060084BB5D /* CoreBrightness.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFFA058A260B44060084BB5D /* CoreBrightness.framework */; };
+		DFFA05AC260BC9CE0084BB5D /* DiskImages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFFA05AB260BC9CE0084BB5D /* DiskImages.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +37,13 @@
 		DF1D4C8C25F2464100B8E8CA /* MorphicIoDTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorphicIoDTests.swift; sourceTree = "<group>"; };
 		DF1D4C8E25F2464100B8E8CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DF1D4C9A25F276BC00B8E8CA /* IoDDMGInstaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IoDDMGInstaller.swift; sourceTree = "<group>"; };
+		DFFA0569260B424B0084BB5D /* ApplicationServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApplicationServices.h; sourceTree = "<group>"; };
+		DFFA056A260B424B0084BB5D /* DiskImages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiskImages.h; sourceTree = "<group>"; };
+		DFFA056F260B42570084BB5D /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		DFFA0571260B426A0084BB5D /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = System/Library/Frameworks/ApplicationServices.framework; sourceTree = SDKROOT; };
+		DFFA0582260B43130084BB5D /* CBBlueLightClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBBlueLightClient.h; sourceTree = "<group>"; };
+		DFFA058A260B44060084BB5D /* CoreBrightness.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBrightness.framework; path = ../../../../../System/Library/PrivateFrameworks/CoreBrightness.framework; sourceTree = "<group>"; };
+		DFFA05AB260BC9CE0084BB5D /* DiskImages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DiskImages.framework; path = ../MacOSX.sdk/System/Library/PrivateFrameworks/DiskImages.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +51,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFFA0572260B426A0084BB5D /* ApplicationServices.framework in Frameworks */,
+				DFFA058B260B44060084BB5D /* CoreBrightness.framework in Frameworks */,
+				DFFA05AC260BC9CE0084BB5D /* DiskImages.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +74,7 @@
 				DF1D4C8025F2464000B8E8CA /* MorphicIoD */,
 				DF1D4C8B25F2464100B8E8CA /* MorphicIoDTests */,
 				DF1D4C7F25F2464000B8E8CA /* Products */,
+				DFFA0570260B426A0084BB5D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -73,6 +90,8 @@
 		DF1D4C8025F2464000B8E8CA /* MorphicIoD */ = {
 			isa = PBXGroup;
 			children = (
+				DFFA056F260B42570084BB5D /* module.modulemap */,
+				DFFA0568260B424B0084BB5D /* include */,
 				DF1D4C8125F2464000B8E8CA /* MorphicIoD.h */,
 				DF1D4C8225F2464000B8E8CA /* Info.plist */,
 				DF1D4C9A25F276BC00B8E8CA /* IoDDMGInstaller.swift */,
@@ -89,6 +108,26 @@
 			path = MorphicIoDTests;
 			sourceTree = "<group>";
 		};
+		DFFA0568260B424B0084BB5D /* include */ = {
+			isa = PBXGroup;
+			children = (
+				DFFA0569260B424B0084BB5D /* ApplicationServices.h */,
+				DFFA0582260B43130084BB5D /* CBBlueLightClient.h */,
+				DFFA056A260B424B0084BB5D /* DiskImages.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		DFFA0570260B426A0084BB5D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DFFA05AB260BC9CE0084BB5D /* DiskImages.framework */,
+				DFFA058A260B44060084BB5D /* CoreBrightness.framework */,
+				DFFA0571260B426A0084BB5D /* ApplicationServices.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -96,6 +135,9 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFFA056C260B424B0084BB5D /* DiskImages.h in Headers */,
+				DFFA0583260B43130084BB5D /* CBBlueLightClient.h in Headers */,
+				DFFA056B260B424B0084BB5D /* ApplicationServices.h in Headers */,
 				DF1D4C8F25F2464100B8E8CA /* MorphicIoD.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -346,10 +388,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 5AAXYGZ428;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -360,11 +403,17 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MODULEMAP_FILE = MorphicIoD/module.modulemap;
 				PRODUCT_BUNDLE_IDENTIFIER = shenanigans.MorphicIoD;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
+				);
 			};
 			name = Debug;
 		};
@@ -372,10 +421,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 5AAXYGZ428;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -386,10 +436,16 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MODULEMAP_FILE = MorphicIoD/module.modulemap;
 				PRODUCT_BUNDLE_IDENTIFIER = shenanigans.MorphicIoD;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
+				);
 			};
 			name = Release;
 		};

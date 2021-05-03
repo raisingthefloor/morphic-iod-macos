@@ -22,7 +22,12 @@
 // * Consumer Electronics Association Foundation
 
 import Foundation
-//import DiskImages
+
+public func doTheThing(arg0: Int32, arg1: Int32) {
+    let x = arg0
+    let y = arg1
+    
+}
 
 public class IoDDMGInstaller {
     
@@ -33,6 +38,43 @@ public class IoDDMGInstaller {
     }
     
     public func mount(filepath: String) -> Bool {
+        var kcb = kCFTypeDictionaryKeyCallBacks
+        var vcb = kCFTypeDictionaryValueCallBacks
+        let diskdict = CFDictionaryCreateMutable(kCFAllocatorDefault, 0, &kcb, &vcb)
+        let pmainurl = Unmanaged.passUnretained("main-url" as CFString).toOpaque()
+        let pagent = Unmanaged.passUnretained("agent" as CFString).toOpaque()
+        let phdiutil = Unmanaged.passUnretained("hdiutil" as CFString).toOpaque()
+        let fp = Unmanaged.passUnretained(filepath as CFString).toOpaque()
+        let pverbose = Unmanaged.passUnretained("verbose" as CFString).toOpaque()
+        let pdebug = Unmanaged.passUnretained("debug" as CFString).toOpaque()
+        let pquiet = Unmanaged.passUnretained("quiet" as CFString).toOpaque()
+        var i_o = "image-options" as CFString
+        var d_o = "drive-options" as CFString
+        let pimageoptions = Unmanaged.passUnretained(i_o).toOpaque()
+        let pdriveoptions = Unmanaged.passUnretained(d_o).toOpaque()
+        let imageoptionsdict = CFDictionaryCreateMutable(kCFAllocatorDefault, 0, &kcb, &vcb)!
+        let driveoptionsdict = CFDictionaryCreateMutable(kCFAllocatorDefault, 0, &kcb, &vcb)!
+        CFDictionarySetValue(diskdict, pmainurl, fp)
+        CFDictionarySetValue(diskdict, pagent, phdiutil)
+        CFDictionarySetValue(diskdict, pdebug, Unmanaged.passUnretained(kCFBooleanTrue).toOpaque())
+        CFDictionarySetValue(diskdict, pverbose, Unmanaged.passUnretained(kCFBooleanTrue).toOpaque())
+        CFDictionarySetValue(diskdict, pquiet, Unmanaged.passUnretained(kCFBooleanFalse).toOpaque())
+        CFDictionarySetValue(diskdict, pimageoptions, Unmanaged.passUnretained(imageoptionsdict).toOpaque())
+        CFDictionarySetValue(diskdict, pdriveoptions, Unmanaged.passUnretained(driveoptionsdict).toOpaque())
+        
+        let prevDebugLevel = DIGetDebugLevel()
+        let prevVerboseLevel = DIGetVerboseLevel()
+        DISetDebugLevel(1)
+        DISetVerboseLevel(1)
+        var bsdName: UInt64 = 0
+        let result = DIHLDiskImageAttach(diskdict, doTheThing, 0, &bsdName)
+        
+        DISetDebugLevel(prevDebugLevel) //reset debug, verbose
+        DISetVerboseLevel(prevVerboseLevel)
+        return false;
+    }
+    
+    public func mountBackup(filepath: String) -> Bool {
         let process = Process()
         process.executableURL = URL(fileURLWithPath: "/usr/bin/hdiutil")
         process.arguments = ["attach", filepath, "-plist"]

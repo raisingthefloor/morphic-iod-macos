@@ -23,12 +23,20 @@ guard let diskArbitrationSession = DASessionCreate(kCFAllocatorDefault) else {
 }
  */
 
-let mount = Process()
-mount.executableURL = URL(fileURLWithPath: "/usr/bin/hdiutil")
-mount.arguments = ["attach", dmgPath.absoluteURL.absoluteString, "-plist"]
+//let mount = Process()
+//mount.executableURL = URL(fileURLWithPath: "/usr/bin/hdiutil")
+//mount.arguments = ["attach", dmgPath.absoluteURL.absoluteString, "-plist"]
 //try mount.run()
 
-if dmg.mount(filepath: dmgPath.absoluteURL.absoluteString) {
+if dmg.mount(filepath: dmgPath.absoluteURL.absoluteString) {    //this won't work
+    print("Mount Successful")
+} else {
+    print("Mount Failed")
+}
+
+
+
+if dmg.mountBackup(filepath: dmgPath.absoluteURL.absoluteString) {  //this works, just calls hdiutil
     print("Mount Successful")
 } else {
     print("Mount Failed")

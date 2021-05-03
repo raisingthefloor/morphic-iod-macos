@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		DF1D4C6725EFD07C00B8E8CA /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1D4C6625EFD07C00B8E8CA /* main.swift */; };
-		DF1D4CA225F6572800B8E8CA /* MorphicIoD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF1D4CA125F6572800B8E8CA /* MorphicIoD.framework */; };
-		DF1D4CA325F6572800B8E8CA /* MorphicIoD.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DF1D4CA125F6572800B8E8CA /* MorphicIoD.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DFF95030260BCCAB0056C75E /* MorphicIoD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF1D4CA125F6572800B8E8CA /* MorphicIoD.framework */; };
+		DFF95031260BCCAB0056C75E /* MorphicIoD.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DF1D4CA125F6572800B8E8CA /* MorphicIoD.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -22,13 +22,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
-		DF1D4CA425F6572800B8E8CA /* Embed Frameworks */ = {
+		DFF95032260BCCAB0056C75E /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				DF1D4CA325F6572800B8E8CA /* MorphicIoD.framework in Embed Frameworks */,
+				DFF95031260BCCAB0056C75E /* MorphicIoD.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -47,7 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DF1D4CA225F6572800B8E8CA /* MorphicIoD.framework in Frameworks */,
+				DFF95030260BCCAB0056C75E /* MorphicIoD.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,7 +98,7 @@
 				DF1D4C5F25EFD07C00B8E8CA /* Sources */,
 				DF1D4C6025EFD07C00B8E8CA /* Frameworks */,
 				DF1D4C6125EFD07C00B8E8CA /* CopyFiles */,
-				DF1D4CA425F6572800B8E8CA /* Embed Frameworks */,
+				DFF95032260BCCAB0056C75E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -272,10 +272,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "IOD Tester/IOD Tester.entitlements";
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5AAXYGZ428;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -284,10 +286,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "IOD Tester/IOD Tester.entitlements";
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5AAXYGZ428;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
